@@ -78,7 +78,7 @@ class ReflectNowPrompt extends Component {
         </form>
         }
         <JournalText/>
-        <Button variant="contained" color="primary" onClick={this.onNextClick}>
+        <Button style={{marginBottom:'15px'}} variant="contained" color="primary" onClick={this.onNextClick}>
           Save
         </Button>
       </div>

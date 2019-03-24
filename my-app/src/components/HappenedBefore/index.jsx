@@ -11,7 +11,7 @@ class HappenedBefore extends Component {
         <br />
         <input type="radio" name="happenedBefore" value="false" />No
         <br /><br />
-        <Button variant="contained" color="primary" onClick={this.props.onNextClick}>
+        <Button style={{marginBottom:'15px'}} variant="contained" color="primary" onClick={this.props.onNextClick}>
           Reflect
         </Button>
       </div>
