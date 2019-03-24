@@ -9,16 +9,21 @@ import JournalText from './components/JournalText';
 import EmotionsSlider from './components/EmotionsSlider';
 import ReflectNowPrompt from './components/ReflectNowPrompt';
 import * as serviceWorker from './serviceWorker';
+import Grid from '@material-ui/core/Grid';
 
 const routing = (
   <Router>
     <TopBar></TopBar>
-    <div>
-      <Route exact path="/" component={App} />
-      <Route path="/happened-before" component={HappenedBefore} />
-      <Route path="/journal-text" component={JournalText} />
-      <Route path="/emotion-slider" component={EmotionsSlider} />
-      <Route path="/reflect-now" component={ReflectNowPrompt} />
+    <div className="main-container">
+      <Grid container spacing={24}>
+        <Grid item xs={12}>
+          <Route exact path="/" component={App} />
+          <Route path="/happened-before" component={HappenedBefore} />
+          <Route path="/journal-text" component={JournalText} />
+          <Route path="/emotion-slider" component={EmotionsSlider} />
+          <Route path="/reflect-now" component={ReflectNowPrompt} />
+        </Grid>
+      </Grid>
     </div>
   </Router>
 )
