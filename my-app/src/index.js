@@ -5,6 +5,7 @@ import { Route, BrowserRouter as Router } from 'react-router-dom'
 import App from './App';
 import TopBar from './components/TopBar';
 import BottomNav from './components/BottomNav';
+import History from './components/History';
 import HappenedBefore from './components/HappenedBefore';
 import JournalText from './components/JournalText';
 import ReflectNowPrompt from './components/ReflectNowPrompt';
@@ -22,6 +23,7 @@ const routing = (
       <Grid container spacing={24}>
         <Grid item xs={12}>
           <Route exact path="/" component={App} />
+          <Route path="/history" component={History} />
           <Route path="/feeling-picker" component={FeelingPicker} />
           <Route path="/emotions-slider" component={EmotionsSlider} />
           <Route path="/happened-before" component={HappenedBefore} />
