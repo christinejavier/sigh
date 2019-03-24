@@ -1,0 +1,33 @@
+.questions-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.questions-list > header {
+  display: block;
+  width: 100%;
+  margin: 10px;
+  font-size: 24px;
+}
+
+.question {
+  padding: 5px;
+  border: 2px solid #000;
+  margin: 10px;
+}
+
+.question:hover {
+  background-color: #FFFF00;
+  cursor: pointer;
+}
+
+.question > span {
+  display: inline-block;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.question-header {
+  font-weight: 600;
+}
