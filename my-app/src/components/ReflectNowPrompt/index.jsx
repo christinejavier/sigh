@@ -3,6 +3,7 @@ import SimpleModal from '../SimpleModal';
 import Button from '@material-ui/core/Button';
 import JournalText from '../JournalText';
 import SituationSentence from '../SituationSentence';
+import Input from '@material-ui/core/Input';
 
 const options = [
   'Yes',
@@ -32,14 +33,19 @@ class ReflectNowPrompt extends Component {
     this.state = {
       open: false,
       askLastTimeYouFeltThis: false,
+      value: '',
     }
+  }
+
+  handleFeltChange = (event) => {
+    this.setState({value: event.target.value});
   }
 
   renderLastTimeYouFeltThis = () => {
     return (
       <div>
         <span>When was the last time that you felt this?</span>
-        <input />
+        <Input type="text" value={this.state.value} onChange={this.handleFeltChange}/>
       </div>
     );
   }
@@ -72,9 +78,8 @@ class ReflectNowPrompt extends Component {
           <form className="ask-last-time-you-felt-this" onSubmit={this.handleSubmit}>
           <label>
             When was the last time that you felt this?
-            <input />
+            <Input style={{marginBottom:'20px'}}/>
           </label>
-          <Button onClick={() => this.setState({ askLastTimeYouFeltThis: false })}>SAVE</Button>
         </form>
         }
         <JournalText/>
