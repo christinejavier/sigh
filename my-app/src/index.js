@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 import App from './App';
+import TopBar from './components/TopBar';
 import HappenedBefore from './components/HappenedBefore';
 import JournalText from './components/JournalText';
 import EmotionsSlider from './components/EmotionsSlider';
@@ -11,6 +12,7 @@ import * as serviceWorker from './serviceWorker';
 
 const routing = (
   <Router>
+    <TopBar></TopBar>
     <div>
       <Route exact path="/" component={App} />
       <Route path="/happened-before" component={HappenedBefore} />
