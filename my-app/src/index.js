@@ -5,7 +5,7 @@ import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 import App from './App';
 import HappenedBefore from './components/HappenedBefore';
 import JournalText from './components/JournalText';
-import EmotionSlider from './components/EmotionSlider';
+import EmotionsSlider from './components/EmotionSlider';
 import * as serviceWorker from './serviceWorker';
 
 const routing = (
@@ -14,7 +14,7 @@ const routing = (
       <Route exact path="/" component={App} />
       <Route path="/happened-before" component={HappenedBefore} />
       <Route path="/journal-text" component={JournalText} />
-      <Route path="/emotion-slider" component={EmotionSlider} />
+      <Route path="/emotion-slider" component={EmotionsSlider} />
     </div>
   </Router>
 )
