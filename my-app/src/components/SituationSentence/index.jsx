@@ -30,9 +30,6 @@ class SituationSentence extends Component {
           </label>
             <Input type="text" value={this.state.value} onChange={this.handleChange} />
         </form>
-        <Button style={{marginBottom:'15px'}} variant="contained" color="primary">
-          Next
-        </Button>
       </div>
     );
   }
