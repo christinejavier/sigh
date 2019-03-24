@@ -10,6 +10,11 @@ class App extends Component {
         <ReflectNowPrompt/>
         <HappenedBefore></HappenedBefore>
       </div>
+      <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="/happened-before">happened-before</a></li>
+        <li><a href="/journal-text">journal-text</a></li>
+      </ul>
     );
   }
 }
