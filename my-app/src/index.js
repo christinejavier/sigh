@@ -4,6 +4,7 @@ import './index.css';
 import { Route, BrowserRouter as Router } from 'react-router-dom'
 import App from './App';
 import TopBar from './components/TopBar';
+import BottomNav from './components/BottomNav';
 import HappenedBefore from './components/HappenedBefore';
 import JournalText from './components/JournalText';
 import ReflectNowPrompt from './components/ReflectNowPrompt';
@@ -30,6 +31,7 @@ const routing = (
         </Grid>
       </Grid>
     </div>
+    <BottomNav></BottomNav>
   </Router>
 )
 
