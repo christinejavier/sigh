@@ -5,7 +5,7 @@ import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 import App from './App';
 import HappenedBefore from './components/HappenedBefore';
 import JournalText from './components/JournalText';
-import EmotionsSlider from './components/EmotionSlider';
+import EmotionsSlider from './components/EmotionsSlider';
 import * as serviceWorker from './serviceWorker';
 
 const routing = (
