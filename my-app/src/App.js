@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import HappenedBefore from './components/HappenedBefore';
-import EmotionsSlider from './components/EmotionsSlider';
 
 class App extends Component {
   render() {
@@ -11,6 +9,7 @@ class App extends Component {
         <li><a href="/happened-before">happened-before</a></li>
         <li><a href="/journal-text">journal-text</a></li>
         <li><a href="/emotion-slider">emotion-slider</a></li>
+        <li><a href="/reflect-now">reflect-now</a></li>
       </ul>
     );
   }
