@@ -15,7 +15,7 @@ class SituationSentence extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.props.onSituationSentenceUpdate(this.state.value);
+    // this.props.onSituationSentenceUpdate(this.state.value);
   }
 
   render() {

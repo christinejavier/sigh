@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
+import { Route, BrowserRouter as Router } from 'react-router-dom'
 import App from './App';
 import TopBar from './components/TopBar';
 import HappenedBefore from './components/HappenedBefore';
 import JournalText from './components/JournalText';
-import EmotionsSlider from './components/EmotionsSlider';
 import ReflectNowPrompt from './components/ReflectNowPrompt';
+import EmotionsSlider from './components/EmotionsSlider';
+import SituationSentence from './components/SituationSentence';
+
 import * as serviceWorker from './serviceWorker';
 import Grid from '@material-ui/core/Grid';
 
@@ -18,10 +20,11 @@ const routing = (
       <Grid container spacing={24}>
         <Grid item xs={12}>
           <Route exact path="/" component={App} />
+          <Route path="/emotions-slider" component={EmotionsSlider} />
           <Route path="/happened-before" component={HappenedBefore} />
           <Route path="/journal-text" component={JournalText} />
-          <Route path="/emotion-slider" component={EmotionsSlider} />
           <Route path="/reflect-now" component={ReflectNowPrompt} />
+          <Route path="/situation-sentence" component={SituationSentence} />
         </Grid>
       </Grid>
     </div>

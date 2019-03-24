@@ -29,11 +29,29 @@ class ReflectNowPrompt extends Component {
 
     this.state = {
       open: false,
+      askLastTimeYouFeltThis: false,
     }
   }
+
+  renderLastTimeYouFeltThis = () => {
+    return (
+      <div>
+        <span>When was the last time that you felt this?</span>
+        <input />
+      </div>
+    );
+  }
+
   handleClick = option => {
-    if (option === 'Snooze') {
-      this.setState({ open: true });
+    switch (option) {
+      case 'Snooze':
+        this.setState({ open: true });
+        break;
+      case 'Yes':
+        this.setState({ askLastTimeYouFeltThis: true });
+        break;
+      default:
+        return;
     }
   };
 
@@ -46,6 +64,15 @@ class ReflectNowPrompt extends Component {
           <SimpleModal
             open={this.state.open}
           />
+        }
+        { this.state.askLastTimeYouFeltThis &&
+          <form className="ask-last-time-you-felt-this" onSubmit={this.handleSubmit}>
+          <label>
+            When was the last time that you felt this?
+            <input />
+          </label>
+          <Button onClick={() => this.setState({ askLastTimeYouFeltThis: false })}>SAVE</Button>
+        </form>
         }
       </div>
     );
