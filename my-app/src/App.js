@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import DemoComponent from './components/DemoComponent';
 import HappenedBefore from './components/HappenedBefore';
 import EmotionsSlider from './components/EmotionsSlider';
 
-const text = 'HELLO';
-
 class App extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
-      <EmotionsSlider></EmotionsSlider>
+      <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="/happened-before">happened-before</a></li>
+        <li><a href="/journal-text">journal-text</a></li>
+        <li><a href="/emotion-slider">emotion-slider</a></li>
+      </ul>
     );
   }
 }
