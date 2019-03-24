@@ -11,15 +11,11 @@ class HappenedBefore extends Component {
         <br />
         <input type="radio" name="happenedBefore" value="false" />No
         <br /><br />
-        <Button variant="contained" color="primary" onClick={this.onNextClick}>
-          Next
+        <Button variant="contained" color="primary" onClick={this.props.onNextClick}>
+          Reflect
         </Button>
       </div>
     );
-  }
-
-  onNextClick = () => {
-    this.props.history.push('/situation-sentence');
   }
 }
 
