@@ -39,7 +39,7 @@ class BottomNav extends React.Component {SettingsInputComponentRounded
         showLabels
         className={classes.stickToBottom}
       >
-        <BottomNavigationAction label="New" icon={<InsertCommentIcon />} component={Link} to='/feeling-picker'/>
+        <BottomNavigationAction label="New" icon={<InsertCommentIcon />} component={Link} to='/emotions-picker'/>
         <BottomNavigationAction label="History" icon={<HistoryIcon />} component={Link} to='/history'/>
         <BottomNavigationAction label="Report" icon={<InsertChartIcon />} component={Link}/>
         <BottomNavigationAction label="Settings" icon={<SettingsIcon />} component={Link}/>
