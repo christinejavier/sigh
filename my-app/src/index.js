@@ -23,7 +23,7 @@ const routing = (
     <div className="main-container">
       <Grid container spacing={24}>
         <Grid item xs={12}>
-          <Route exact path="/" component={App} />
+          <Route exact path="/" component={EmotionsPicker} />
           <Route path="/history" component={History} />
           <Route path="/feeling-picker" component={FeelingPicker} />
           <Route path="/emotions-slider" component={EmotionsSlider} />

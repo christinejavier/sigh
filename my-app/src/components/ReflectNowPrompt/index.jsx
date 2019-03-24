@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import SimpleModal from '../SimpleModal';
 import Button from '@material-ui/core/Button';
+import JournalText from '../JournalText';
+import SituationSentence from '../SituationSentence';
 
 const options = [
   'Yes',
@@ -58,6 +60,7 @@ class ReflectNowPrompt extends Component {
   render() {
     return (
       <div>
+        <SituationSentence/>
         <span>Do you want to reflect on this now?</span>
         { options.map(option => <Button onClick={() => this.handleClick(option)}>{option}</Button>) }
         { this.state.open &&
@@ -74,8 +77,16 @@ class ReflectNowPrompt extends Component {
           <Button onClick={() => this.setState({ askLastTimeYouFeltThis: false })}>SAVE</Button>
         </form>
         }
+        <JournalText/>
+        <Button variant="contained" color="primary" onClick={this.onNextClick}>
+          Save
+        </Button>
       </div>
     );
+  }
+
+  onNextClick = () => {
+    this.props.history.push('/history');
   }
 }
 

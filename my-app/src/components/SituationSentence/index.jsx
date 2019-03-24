@@ -16,7 +16,6 @@ class SituationSentence extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    // this.props.onSituationSentenceUpdate(this.state.value);
   }
 
   render() {
@@ -29,16 +28,16 @@ class SituationSentence extends Component {
           </label>
           <input type="submit" value="Submit" />
         </form>
-        <Button variant="contained" color="primary" onClick={this.onNextClick}>
+        <Button variant="contained" color="primary">
           Next
         </Button>
       </div>
     );
   }
 
-  onNextClick = () => {
-    this.props.history.push('/reflect-now-prompt');
-  }
+  // onNextClick = () => {
+  //   this.props.history.push('/reflect-now-prompt');
+  // }
 }
 
 export default SituationSentence;

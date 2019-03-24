@@ -1,10 +1,9 @@
 textarea[type="journal"]
 {
     width: 90%;
-    height: 550px;
     background-color: khaki;
     font-size:20px;
     border: 2px solid blue;
-    height:40%;
+    height:200px;
     font-family: Courier New;
 }

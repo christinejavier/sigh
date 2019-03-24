@@ -9,6 +9,7 @@ import Input from '@material-ui/core/Input';
 import FormControl from '@material-ui/core/FormControl';
 import Popover from '@material-ui/core/Popover';
 import InputLabel from '@material-ui/core/InputLabel';
+import HappenedBefore from '../HappenedBefore'
 
 const emotions = [
   'Sad',
@@ -83,7 +84,7 @@ class EmotionsPicker extends Component {
       selectedEmotions: event.target.value,
     });
 
-    if (this.state.selectedEmotions.length > 3) {
+    if (this.state.selectedEmotions.length > 2) {
       return this.setState({
         modalOpen: false,
       });
@@ -135,6 +136,9 @@ class EmotionsPicker extends Component {
           </Select>
         </FormControl>
         </Popover>
+        <HappenedBefore
+          onNextClick={this.onNextClick}
+        />
       </div>
     );
   }
