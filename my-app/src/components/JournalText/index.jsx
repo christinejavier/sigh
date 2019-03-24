@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import './journal.css';
 
 
-class App extends React.Component {
+class JournalText extends React.Component {
   
   render() {
     return (
@@ -11,4 +12,4 @@ class App extends React.Component {
   
 }
 
-React.render(<App />, document.getElementById('app'));
+export default JournalText;
