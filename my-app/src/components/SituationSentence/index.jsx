@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from '@material-ui/core/Button';
 
 class SituationSentence extends Component {
   constructor(props) {
@@ -20,14 +21,23 @@ class SituationSentence extends Component {
 
   render() {
     return (
-      <form className="situation-sentence" onSubmit={this.handleSubmit}>
-        <label>
-          Describe the situation in a sentence.
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
+      <div>
+        <form className="situation-sentence" onSubmit={this.handleSubmit}>
+          <label>
+            Describe the situation in a sentence.
+            <input type="text" value={this.state.value} onChange={this.handleChange} />
+          </label>
+          <input type="submit" value="Submit" />
+        </form>
+        <Button variant="contained" color="primary" onClick={this.onNextClick}>
+          Next
+        </Button>
+      </div>
     );
+  }
+
+  onNextClick = () => {
+    this.props.history.push('/reflect-now-prompt');
   }
 }
 

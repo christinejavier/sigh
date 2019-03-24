@@ -35,7 +35,7 @@ function TopBar(props) {
         <AppBar position="static" color="primary">
           <Toolbar>
             <Typography variant="h6" color="inherit">
-              sighh
+              <a href="/" className="not-link">sigh</a>
             </Typography>
           </Toolbar>
         </AppBar>
