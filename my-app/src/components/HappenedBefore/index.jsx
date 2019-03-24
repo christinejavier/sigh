@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './happened-before.css';
+import Button from '@material-ui/core/Button';
 
 class HappenedBefore extends Component {
   render() {
@@ -9,8 +10,16 @@ class HappenedBefore extends Component {
         <input type="radio" name="happenedBefore" value="true" />Yes
         <br />
         <input type="radio" name="happenedBefore" value="false" />No
+        <br /><br />
+        <Button variant="contained" color="primary" onClick={this.onNextClick}>
+          Next
+        </Button>
       </div>
     );
+  }
+
+  onNextClick = () => {
+    this.props.history.push('/situation-sentence');
   }
 }
 

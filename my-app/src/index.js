@@ -3,25 +3,32 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { Route, BrowserRouter as Router } from 'react-router-dom'
 import App from './App';
+import TopBar from './components/TopBar';
 import HappenedBefore from './components/HappenedBefore';
 import JournalText from './components/JournalText';
 import ReflectNowPrompt from './components/ReflectNowPrompt';
 import EmotionsSlider from './components/EmotionsSlider';
-import SimpleModal from './components/SimpleModal';
 import SituationSentence from './components/SituationSentence';
+import FeelingPicker from './components/FeelingPicker';
 
 import * as serviceWorker from './serviceWorker';
+import Grid from '@material-ui/core/Grid';
 
 const routing = (
   <Router>
-    <div>
-      <Route exact path="/" component={App} />
-      <Route path="/emotions-slider" component={EmotionsSlider} />
-      <Route path="/happened-before" component={HappenedBefore} />
-      <Route path="/journal-text" component={JournalText} />
-      <Route path="/reflect-now-prompt" component={ReflectNowPrompt} />
-      <Route path="/simple-modal" component={SimpleModal} />
-      <Route path="/situation-sentence" component={SituationSentence} />
+    <TopBar></TopBar>
+    <div className="main-container">
+      <Grid container spacing={24}>
+        <Grid item xs={12}>
+          <Route exact path="/" component={App} />
+          <Route path="/feeling-picker" component={FeelingPicker} />
+          <Route path="/emotions-slider" component={EmotionsSlider} />
+          <Route path="/happened-before" component={HappenedBefore} />
+          <Route path="/journal-text" component={JournalText} />
+          <Route path="/reflect-now-prompt" component={ReflectNowPrompt} />
+          <Route path="/situation-sentence" component={SituationSentence} />
+        </Grid>
+      </Grid>
     </div>
   </Router>
 )
