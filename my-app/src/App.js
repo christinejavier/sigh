@@ -13,6 +13,7 @@ class App extends Component {
           <li><a href="/reflect-now-prompt">reflect-now-prompt</a></li>
           <li><a href="/simple-modal">simple-modal</a></li>
           <li><a href="/situation-sentence">situation-sentence</a></li>
+          <li><a href="/emotions-picker">emotions-picker</a></li>
         </ul>
       </div>
     );
