@@ -7,10 +7,20 @@ import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import Input from '@material-ui/core/Input';
 import FormControl from '@material-ui/core/FormControl';
+import Popover from '@material-ui/core/Popover';
 import InputLabel from '@material-ui/core/InputLabel';
 
 const emotions = [
-  'Sadness',
+  'Sad',
+  'Anxious',
+  'Insecure',
+  'Embarrassed',
+  'Helpless',
+  'Rejected',
+  'Confused',
+  'Irritated',
+  'Jealous',
+  'Frustrated',
 ];
 
 const styles = theme => ({
@@ -52,6 +62,7 @@ class EmotionsPicker extends Component {
     this.state = {
       value: '',
       selectedEmotions: [],
+      modalOpen: false,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -68,7 +79,19 @@ class EmotionsPicker extends Component {
   }
 
   handleSelectChange = (event) => {
-    this.setState({ selectedEmotions: event.target.value });
+    this.setState({
+      selectedEmotions: event.target.value,
+    });
+
+    if (this.state.selectedEmotions.length > 3) {
+      return this.setState({
+        modalOpen: false,
+      });
+    }
+  }
+
+  handleClickWheel = () => {
+    this.setState({ modalOpen: !this.state.modalOpen });
   }
 
   render() {
@@ -78,15 +101,15 @@ class EmotionsPicker extends Component {
           <span className="inline-block left-align">Stress</span>
           <span className="inline-block right-align">Anger</span>
         </div>
-        <img className="block" src="color-picker-transparent.png"/>
+        <img className="block" onClick={this.handleClickWheel} src="color-picker-transparent.png"/>
         <div className="lower-quad">
           <span className="inline-block left-align">Content</span>
           <span className="inline-block right-align">Sadness</span>
         </div>
-        <Modal
+        <Popover
           aria-labelledby="simple-modal-title"
           aria-describedby="simple-modal-description"
-          open={true}
+          open={this.state.modalOpen}
           onClose={this.handleClose}
         >
         <FormControl>
@@ -111,7 +134,7 @@ class EmotionsPicker extends Component {
             ))}
           </Select>
         </FormControl>
-        </Modal>
+        </Popover>
       </div>
     );
   }
