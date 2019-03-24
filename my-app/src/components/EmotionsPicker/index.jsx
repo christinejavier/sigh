@@ -104,8 +104,8 @@ class EmotionsPicker extends Component {
         </div>
         <img className="block" onClick={this.handleClickWheel} src="color-picker-transparent.png"/>
         <div className="lower-quad">
-          <span className="inline-block left-align">Content</span>
-          <span className="inline-block right-align">Sadness</span>
+          <span className="inline-block left-align">Sadness</span>
+          <span className="inline-block right-align">I'm okay</span>
         </div>
         <Popover
           aria-labelledby="simple-modal-title"
