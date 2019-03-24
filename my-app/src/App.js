@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import HappenedBefore from './components/HappenedBefore';
-import ReflectNowPrompt from './components/ReflectNowPrompt';
 
 class App extends Component {
   render() {
@@ -11,6 +9,7 @@ class App extends Component {
           <li><a href="/">home</a></li>
           <li><a href="/happened-before">happened-before</a></li>
           <li><a href="/journal-text">journal-text</a></li>
+          <li><a href="/reflect-now-prompt">reflect-now-prompt</a></li>
         </ul>
       </div>
     );
