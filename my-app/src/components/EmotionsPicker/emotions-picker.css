@@ -1,0 +1,29 @@
+.inline-block {
+  display: inline-block;
+  width: 50%;
+}
+
+.block-display {
+  display: block;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.emotions-picker {
+  width: 100%;
+  display: block;
+}
+
+.emotions-picker > img {
+  width: 100%;
+}
+
+.emotions-picker > img:hover {
+  cursor: crosshair;
+}
