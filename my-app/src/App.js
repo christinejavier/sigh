@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import EmotionsWheel from './components/EmotionsWheel';
+import HappenedBefore from './components/HappenedBefore';
 
 class App extends Component {
   render() {
@@ -22,6 +23,7 @@ class App extends Component {
             Learn React
           </a>
         </header>
+        <HappenedBefore></HappenedBefore>
       </div>
     );
   }
