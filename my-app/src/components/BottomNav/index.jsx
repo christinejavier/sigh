@@ -1,23 +1,27 @@
 import React, { Component } from 'react';
 import './bottom-nav.css';
 
+import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
+import HistoryIcon from '@material-ui/icons/History';
 import InsertChartIcon from '@material-ui/icons/InsertChart';
 import InsertCommentIcon from '@material-ui/icons/InsertComment';
 import SettingsIcon from '@material-ui/icons/Settings';
 
 const styles = {
-  root: {
-    width: 500,
+  stickToBottom: {
+    width: '100%',
+    position: 'fixed',
+    bottom: 0,
   },
 };
 
 class BottomNav extends React.Component {SettingsInputComponentRounded
   state = {
-    value: 0,
+    value: 0
   };
 
   handleChange = (event, value) => {
@@ -33,11 +37,12 @@ class BottomNav extends React.Component {SettingsInputComponentRounded
         value={value}
         onChange={this.handleChange}
         showLabels
-        className={classes.root}
+        className={classes.stickToBottom}
       >
-        <BottomNavigationAction label="Log" icon={<InsertCommentIcon />}/>
-        <BottomNavigationAction label="Report" icon={<InsertChartIcon />} />
-        <BottomNavigationAction label="Settings" icon={<SettingsIcon />}/>
+        <BottomNavigationAction label="New" icon={<InsertCommentIcon />} component={Link} to='/feeling-picker'/>
+        <BottomNavigationAction label="History" icon={<HistoryIcon />} component={Link} to='/journal-text'/>
+        <BottomNavigationAction label="Report" icon={<InsertChartIcon />} component={Link}/>
+        <BottomNavigationAction label="Settings" icon={<SettingsIcon />} component={Link}/>
       </BottomNavigation>
     );
   }
